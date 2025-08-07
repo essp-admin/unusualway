@@ -5,22 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Unusual Way</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     html, body {
       margin: 0;
       padding: 0;
-      background-color: black;
       height: 100%;
       width: 100%;
+      background-color: black;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      overflow: hidden; /* evita scroll innecesario */
     }
 
     img {
       max-width: 100%;
       max-height: 100vh;
-      height: auto;
-      width: auto;
       object-fit: contain;
       display: block;
     }
@@ -30,4 +33,3 @@
   <img src="cover.png" alt="Unusual Way" />
 </body>
 </html>
-/*comment*/ 
