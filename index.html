@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Unusual Way</title>
 
-  <!-- FAVICON FIJO PARA GITHUB PAGES -->
+  <!-- FAVICON -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="shortcut icon" href="/favicon-32x32.png">
   <link rel="apple-touch-icon" href="/favicon-32x32.png">
@@ -17,7 +17,9 @@
       box-sizing: border-box;
     }
 
-    html, body { height: 100%; }
+    html, body {
+      height: 100%;
+    }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -28,14 +30,16 @@
       position: relative;
     }
 
+    /* LOGO ARRIBA IZQUIERDA (BASE DESKTOP) */
     .logo {
       position: absolute;
       top: 32px;
       left: 32px;
-      width: 230px;
-      max-width: 60vw;
+      width: 190px;   /* más pequeño */
+      max-width: 40vw;
     }
 
+    /* MENÚ CENTRADO (BASE DESKTOP) */
     .menu-wrapper {
       position: absolute;
       top: 50%;
@@ -46,59 +50,79 @@
     }
 
     nav {
-      font-size: 24px;
-      letter-spacing: 1px;
+      font-size: 20px;    /* más pequeño */
+      letter-spacing: 0.5px;
     }
 
     nav a {
       text-decoration: none;
       color: black;
-      margin: 0 22px;
-      font-weight: 700;
+      margin: 0 16px;     /* menos separación */
+      font-weight: 600;
       transition: 0.2s ease;
       display: inline-block;
     }
 
-    nav .active { color: red; }
+    nav a:hover {
+      opacity: 0.6;
+    }
 
-    nav a:hover { opacity: 0.6; }
+    nav .active {
+      color: red;
+    }
 
+    /* FOOTER ABAJO DERECHA (BASE DESKTOP) */
     footer {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      bottom: 28px;   /* más aire */
+      right: 28px;    /* más aire */
       text-align: right;
       font-size: 12px;
       line-height: 1.4;
     }
 
+    /* ------- MOBILE ------- */
     @media (max-width: 600px) {
-      body { padding: 20px; }
 
-      .logo {
-        position: static;
-        width: 65%;
-        max-width: 260px;
-        margin-bottom: 50px;
+      html, body {
+        height: 100%;
       }
 
+      body {
+        /* sin padding grande para evitar scroll */
+        padding: 0;
+      }
+
+      /* Logo más pequeño y con aire desde bordes */
+      .logo {
+        top: 20px;
+        left: 20px;
+        width: 150px;
+        max-width: 55vw;
+      }
+
+      /* Menú vertical, centrado un poco más abajo del centro */
       .menu-wrapper {
-        position: static;
-        transform: none;
+        top: 58%; /* baja un poco el menú */
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: 100%;
         text-align: center;
       }
 
-      nav { font-size: 20px; }
-
-      nav a {
-        display: block;
-        margin: 8px 0;
+      nav {
+        font-size: 17px;  /* aún más discreto en móvil */
       }
 
+      nav a {
+        display: block;   /* un item debajo de otro */
+        margin: 6px 0;    /* poco espacio entre items */
+      }
+
+      /* Footer con aire pero discreto, para que todo quepa sin scroll */
       footer {
-        right: 10px;
-        bottom: 10px;
+        bottom: 14px;
+        right: 14px;
         font-size: 11px;
       }
     }
@@ -107,17 +131,20 @@
 
 <body>
 
+  <!-- LOGO (archivo real: UN-logo.png en la raíz del repo) -->
   <img src="UN-logo.png" alt="Unusual Way" class="logo">
 
+  <!-- MENÚ -->
   <div class="menu-wrapper">
     <nav>
       <a href="https://essential-part.com/labels/unusual-way/" target="_blank">EXHIBITIONS</a>
-      <a href="https://soundcloud.com/unusual-way" target="_blank">GALLERY</a>
+      <a href="https://soundcloud.com/unusual-way/sets/gallery" target="_blank">GALLERY</a>
       <a href="https://www.instagram.com/adrianromanmusic" target="_blank">ARTISTS</a>
-      <a href="https://essential-part.com/store/" class="active" target="_blank">STORE</a>
+      <a href="https://www.beatport.com/label/unusual-way/134347" class="active" target="_blank">STORE</a>
     </nav>
   </div>
 
+  <!-- FOOTER -->
   <footer>
     Unusual Way<br>
     Digital Space, World<br>
