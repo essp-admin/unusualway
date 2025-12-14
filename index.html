@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Unusual Way</title>
 
-  <!-- FAVICON -->
-  <link rel="icon" type="image/png" href="favicon-32x32.png" />
+  <!-- FAVICON FIJO PARA GITHUB PAGES -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="shortcut icon" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="/favicon-32x32.png">
 
   <style>
     * {
@@ -15,9 +17,7 @@
       box-sizing: border-box;
     }
 
-    html, body {
-      height: 100%;
-    }
+    html, body { height: 100%; }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -28,7 +28,6 @@
       position: relative;
     }
 
-    /* LOGO ARRIBA IZQUIERDA DESKTOP */
     .logo {
       position: absolute;
       top: 32px;
@@ -37,7 +36,6 @@
       max-width: 60vw;
     }
 
-    /* CONTENEDOR DEL MENÚ, CENTRADO EN DESKTOP */
     .menu-wrapper {
       position: absolute;
       top: 50%;
@@ -61,15 +59,10 @@
       display: inline-block;
     }
 
-    nav a:hover {
-      opacity: 0.6;
-    }
+    nav .active { color: red; }
 
-    nav .active {
-      color: red;
-    }
+    nav a:hover { opacity: 0.6; }
 
-    /* FOOTER ABAJO DERECHA */
     footer {
       position: fixed;
       bottom: 20px;
@@ -79,18 +72,14 @@
       line-height: 1.4;
     }
 
-    /* ------- MOBILE ------- */
     @media (max-width: 600px) {
-
-      body {
-        padding: 20px;
-      }
+      body { padding: 20px; }
 
       .logo {
         position: static;
         width: 65%;
         max-width: 260px;
-        margin-bottom: 60px;
+        margin-bottom: 50px;
       }
 
       .menu-wrapper {
@@ -100,12 +89,11 @@
         text-align: center;
       }
 
-      nav {
-        font-size: 18px;
-      }
+      nav { font-size: 20px; }
 
       nav a {
-        margin: 0 10px;
+        display: block;
+        margin: 8px 0;
       }
 
       footer {
@@ -119,10 +107,8 @@
 
 <body>
 
-  <!-- LOGO (archivo: logo.png en la raíz) -->
-  <img src="logo.png" alt="Unusual Way" class="logo">
+  <img src="UN-logo.png" alt="Unusual Way" class="logo">
 
-  <!-- MENÚ -->
   <div class="menu-wrapper">
     <nav>
       <a href="https://essential-part.com/labels/unusual-way/" target="_blank">EXHIBITIONS</a>
@@ -132,11 +118,10 @@
     </nav>
   </div>
 
-  <!-- FOOTER -->
   <footer>
     Unusual Way<br>
     Digital Space, World<br>
-    Open today, 00:00 a.m.–23:59 p.m.
+    Open today, 12:00 AM – 11:59 PM
   </footer>
 
 </body>
