@@ -30,7 +30,7 @@
       position: relative;
     }
 
-    /* LOGO ARRIBA IZQUIERDA (BASE DESKTOP) */
+    /* LOGO ARRIBA IZQUIERDA (DESKTOP) */
     .logo {
       position: absolute;
       top: 32px;
@@ -39,7 +39,7 @@
       max-width: 40vw;
     }
 
-    /* MENÚ CENTRADO (BASE DESKTOP) */
+    /* MENÚ CENTRADO (DESKTOP) */
     .menu-wrapper {
       position: absolute;
       top: 50%;
@@ -50,14 +50,14 @@
     }
 
     nav {
-      font-size: 20px;    /* más pequeño */
+      font-size: 20px;     /* tamaño más contenido */
       letter-spacing: 0.5px;
     }
 
     nav a {
       text-decoration: none;
       color: black;
-      margin: 0 16px;     /* menos separación */
+      margin: 0 16px;
       font-weight: 600;
       transition: 0.2s ease;
       display: inline-block;
@@ -71,7 +71,7 @@
       color: red;
     }
 
-    /* FOOTER ABAJO DERECHA (BASE DESKTOP) */
+    /* FOOTER ABAJO DERECHA (DESKTOP) */
     footer {
       position: fixed;
       bottom: 28px;   /* más aire */
@@ -85,25 +85,26 @@
     @media (max-width: 600px) {
 
       html, body {
-        height: 100%;
+        height: 100vh;
       }
 
       body {
-        /* sin padding grande para evitar scroll */
         padding: 0;
       }
 
-      /* Logo más pequeño y con aire desde bordes */
+      /* Logo más pequeño y con aire desde el borde */
       .logo {
+        position: absolute;
         top: 20px;
         left: 20px;
         width: 150px;
         max-width: 55vw;
       }
 
-      /* Menú vertical, centrado un poco más abajo del centro */
+      /* Menú vertical, exactamente centrado en pantalla */
       .menu-wrapper {
-        top: 58%; /* baja un poco el menú */
+        position: absolute;
+        top: 50%;                        /* centro vertical */
         left: 50%;
         transform: translate(-50%, -50%);
         width: 100%;
@@ -111,15 +112,15 @@
       }
 
       nav {
-        font-size: 17px;  /* aún más discreto en móvil */
+        font-size: 17px;                 /* un poco más pequeño en móvil */
       }
 
       nav a {
-        display: block;   /* un item debajo de otro */
-        margin: 6px 0;    /* poco espacio entre items */
+        display: block;                  /* un ítem debajo de otro */
+        margin: 6px 0;
       }
 
-      /* Footer con aire pero discreto, para que todo quepa sin scroll */
+      /* Footer discreto abajo a la derecha */
       footer {
         bottom: 14px;
         right: 14px;
