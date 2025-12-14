@@ -6,14 +6,17 @@
   <title>Unusual Way</title>
 
   <!-- FAVICON -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="shortcut icon" type="image/png" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" href="favicon-32x32.png" />
 
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
     }
 
     body {
@@ -25,7 +28,7 @@
       position: relative;
     }
 
-    /* LOGO ARRIBA IZQUIERDA */
+    /* LOGO ARRIBA IZQUIERDA DESKTOP */
     .logo {
       position: absolute;
       top: 32px;
@@ -34,14 +37,17 @@
       max-width: 60vw;
     }
 
-    /* MENÚ CENTRADO (DESKTOP) */
-    nav {
+    /* CONTENEDOR DEL MENÚ, CENTRADO EN DESKTOP */
+    .menu-wrapper {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       width: 100%;
       text-align: center;
+    }
+
+    nav {
       font-size: 24px;
       letter-spacing: 1px;
     }
@@ -87,12 +93,14 @@
         margin-bottom: 60px;
       }
 
-      nav {
+      .menu-wrapper {
         position: static;
         transform: none;
-        margin-top: 0;
         width: 100%;
         text-align: center;
+      }
+
+      nav {
         font-size: 18px;
       }
 
@@ -111,16 +119,18 @@
 
 <body>
 
-  <!-- LOGO -->
+  <!-- LOGO (archivo: logo.png en la raíz) -->
   <img src="logo.png" alt="Unusual Way" class="logo">
 
   <!-- MENÚ -->
-  <nav>
-    <a href="https://essential-part.com/labels/unusual-way/" target="_blank">EXHIBITIONS</a>
-    <a href="https://soundcloud.com/unusual-way" target="_blank">GALLERY</a>
-    <a href="https://www.instagram.com/adrianromanmusic" target="_blank">ARTISTS</a>
-    <a href="https://essential-part.com/store/" class="active" target="_blank">STORE</a>
-  </nav>
+  <div class="menu-wrapper">
+    <nav>
+      <a href="https://essential-part.com/labels/unusual-way/" target="_blank">EXHIBITIONS</a>
+      <a href="https://soundcloud.com/unusual-way" target="_blank">GALLERY</a>
+      <a href="https://www.instagram.com/adrianromanmusic" target="_blank">ARTISTS</a>
+      <a href="https://essential-part.com/store/" class="active" target="_blank">STORE</a>
+    </nav>
+  </div>
 
   <!-- FOOTER -->
   <footer>
