@@ -6,7 +6,8 @@
   <title>Unusual Way</title>
 
   <!-- FAVICON -->
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="shortcut icon" type="image/png" href="/favicon-32x32.png" />
 
   <style>
     * {
@@ -33,7 +34,7 @@
       max-width: 60vw;
     }
 
-    /* MENÚ CENTRADO */
+    /* MENÚ CENTRADO (DESKTOP) */
     nav {
       position: absolute;
       top: 50%;
@@ -67,3 +68,66 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
+      text-align: right;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    /* ------- MOBILE ------- */
+    @media (max-width: 600px) {
+
+      body {
+        padding: 20px;
+      }
+
+      .logo {
+        position: static;
+        width: 65%;
+        max-width: 260px;
+        margin-bottom: 60px;
+      }
+
+      nav {
+        position: static;
+        transform: none;
+        margin-top: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+      }
+
+      nav a {
+        margin: 0 10px;
+      }
+
+      footer {
+        right: 10px;
+        bottom: 10px;
+        font-size: 11px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- LOGO -->
+  <img src="logo.png" alt="Unusual Way" class="logo">
+
+  <!-- MENÚ -->
+  <nav>
+    <a href="https://essential-part.com/labels/unusual-way/" target="_blank">EXHIBITIONS</a>
+    <a href="https://soundcloud.com/unusual-way" target="_blank">GALLERY</a>
+    <a href="https://www.instagram.com/adrianromanmusic" target="_blank">ARTISTS</a>
+    <a href="https://essential-part.com/store/" class="active" target="_blank">STORE</a>
+  </nav>
+
+  <!-- FOOTER -->
+  <footer>
+    Unusual Way<br>
+    Digital Space, World<br>
+    Open today, 00:00 a.m.–23:59 p.m.
+  </footer>
+
+</body>
+</html>
