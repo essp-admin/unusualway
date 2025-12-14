@@ -4,32 +4,90 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Unusual Way</title>
+
   <style>
     * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
     }
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: white;
+      color: black;
       width: 100%;
-      background-color: black;
+      height: 100vh;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden; /* evita scroll innecesario */
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 40px;
     }
 
-    img {
-      max-width: 100%;
-      max-height: 100vh;
-      object-fit: contain;
-      display: block;
+    /* LOGO */
+    .logo {
+      width: 260px;
+      max-width: 40vw;
+    }
+
+    /* NAV */
+    nav {
+      margin-top: 80px;
+      width: 100%;
+      text-align: center;
+      font-size: 22px;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      margin: 0 25px;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    nav a:hover {
+      opacity: 0.6;
+    }
+
+    nav .active {
+      color: red;
+    }
+
+    /* FOOTER */
+    footer {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      text-align: right;
+      font-size: 13px;
+      line-height: 1.4;
     }
   </style>
 </head>
+
 <body>
-  <img src="Cover-timpano.png" alt="Unusual Way" />
+
+  <!-- LOGO -->
+  <img src="UN-logo.png" alt="Unusual Way" class="logo">
+
+  <!-- MENU -->
+  <nav>
+    <a href="#">EXHIBITIONS</a>
+    <a href="#">GALLERY</a>
+    <a href="#">ARTISTS</a>
+    <a href="#" class="active">STORE</a>
+  </nav>
+
+  <!-- FOOTER -->
+  <footer>
+    Unusual Way<br>
+    Digital Space, World<br>
+    Open today, 00:00 a.m.–23:59 p.m.
+  </footer>
+
 </body>
 </html>
+
