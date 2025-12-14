@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Unusual Way</title>
 
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+
   <style>
     * {
       margin: 0;
@@ -17,35 +20,38 @@
       background-color: white;
       color: black;
       width: 100%;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      padding: 40px;
+      min-height: 100vh;
+      position: relative;
     }
 
-    /* LOGO */
+    /* LOGO ARRIBA IZQUIERDA */
     .logo {
-      width: 260px;
-      max-width: 40vw;
+      position: absolute;
+      top: 32px;
+      left: 32px;
+      width: 230px;
+      max-width: 60vw;
     }
 
-    /* NAV */
+    /* MENÚ CENTRADO */
     nav {
-      margin-top: 80px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       width: 100%;
       text-align: center;
-      font-size: 22px;
+      font-size: 24px;
       letter-spacing: 1px;
     }
 
     nav a {
       text-decoration: none;
       color: black;
-      margin: 0 25px;
-      font-weight: 600;
+      margin: 0 22px;
+      font-weight: 700;
       transition: 0.2s ease;
+      display: inline-block;
     }
 
     nav a:hover {
@@ -56,38 +62,8 @@
       color: red;
     }
 
-    /* FOOTER */
+    /* FOOTER ABAJO DERECHA */
     footer {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      text-align: right;
-      font-size: 13px;
-      line-height: 1.4;
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- LOGO -->
-  <img src="UN-logo.png" alt="Unusual Way" class="logo">
-
-  <!-- MENU -->
-  <nav>
-    <a href="#">EXHIBITIONS</a>
-    <a href="#">GALLERY</a>
-    <a href="#">ARTISTS</a>
-    <a href="#" class="active">STORE</a>
-  </nav>
-
-  <!-- FOOTER -->
-  <footer>
-    Unusual Way<br>
-    Digital Space, World<br>
-    Open today, 00:00 a.m.–23:59 p.m.
-  </footer>
-
-</body>
-</html>
-
